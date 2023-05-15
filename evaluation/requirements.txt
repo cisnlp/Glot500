@@ -1,0 +1,15 @@
+apex==0.1
+faiss==1.7.1
+matplotlib==3.3.4
+networkx==1.11
+numpy==1.19.5
+pandas==1.1.5
+ptvsd==4.3.2
+regex==2021.11.2
+scikit_learn==1.2.2
+scipy==1.5.4
+seqeval==1.2.2
+torch==2.0.1
+tqdm==4.62.3
+transformers==4.18.0
+~orch==1.8.1+cu111
