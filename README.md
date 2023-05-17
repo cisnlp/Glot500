@@ -17,6 +17,16 @@ This repository contains information about Glot500, code for Glot2000-c and Glot
 
 ## Data preparation
 
+For training both tokenizer and model of Glot500-m, we need to prepare a **balanced** corpus covering all languages.
+
+Go to 'preprocessing/' and run:
+
+```
+bash merge_files.sh
+```
+
+We set `--scale 1` for tokenizer, `--scale 30` for model.
+
 # Glot500-m
 
 # Evaluation
