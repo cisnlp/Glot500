@@ -1,9 +1,11 @@
 # Glot500: Glot500: Scaling Multilingual Corpora and Language Models to 500+ Languages
 
-[**Tasks**]() |
+[**Model**]() |
 [**Paper**]()
 
 # Introduction
+
+This repository contains information about Glot500, code for Glot2000-c and Glot500-m, and implementations of Glot500-m evaluation.
 
 # Prerequisites
 
