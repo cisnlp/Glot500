@@ -11,11 +11,25 @@ This repository contains information about Glot500, code for Glot2000-c and Glot
 
 # Glot2000-c
 
+## Data collection
+
+## Data cleaning
+
 ## Data preparation
 
 # Glot500-m
 
 # Evaluation
+
+## Perplexity
+
+## Sentence Retrieval
+
+## Sequence Labeling
+
+## Round Trip Alignment
+
+## Text Classification
 
 # Paper
 
