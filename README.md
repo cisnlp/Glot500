@@ -1,4 +1,4 @@
-# Glot500: Glot500: Scaling Multilingual Corpora and Language Models to 500+ Languages
+# Glot500: Scaling Multilingual Corpora and Language Models to 500+ Languages
 
 [**Model**]() |
 [**Paper**]()
@@ -8,6 +8,11 @@
 This repository contains information about Glot500, code for Glot2000-c and Glot500-m, and implementations of Glot500-m evaluation.
 
 # Prerequisites
+
+We use two settings due to package conflict:
+
+- Major: Python 3.9, `requirements.txt`
+- Sentence retrieval: Python 3.6, `evaluation/retrieval/requirements.txt`
 
 # Glot2000-c
 
@@ -41,5 +46,9 @@ We set `--scale 1` for tokenizer, `--scale 30` for model.
 
 ## Text Classification
 
-# Paper
+# Citation
+
+# Acknowledgements
+
+This repository is built on top of [transformers](https://github.com/huggingface/transformers) and [xtreme](https://github.com/google-research/xtreme).
 
