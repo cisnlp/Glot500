@@ -34,6 +34,14 @@ We set `--scale 1` for tokenizer, `--scale 30` for model.
 
 # Glot500-m
 
+## Vocabulary Extension
+
+## Continued Pretraining
+
+```
+bash train_bash.sh
+```
+
 # Evaluation
 
 ## Perplexity
