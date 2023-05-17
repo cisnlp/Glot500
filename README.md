@@ -36,7 +36,15 @@ We set `--scale 1` for tokenizer, `--scale 30` for model.
 
 ## Vocabulary Extension
 
+Go to 'tokenization/' and run:
+
+```
+bash train.sh
+```
+
 ## Continued Pretraining
+
+Go to 'modeling/' and run:
 
 ```
 bash train_bash.sh
