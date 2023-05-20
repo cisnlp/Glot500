@@ -1,6 +1,6 @@
 # Glot500: Scaling Multilingual Corpora and Language Models to 500+ Languages
 
-[**Model**](https://huggingface.co/cis-lmu/Glot500) |
+[**Model**](https://huggingface.co/cis-lmu/glot500-base) |
 [**Paper**]()
 
 # Introduction
