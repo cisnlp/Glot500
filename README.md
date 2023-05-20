@@ -149,13 +149,13 @@ We provide in-depth evaluation of Glot500-m model and baselines in the paper. Ea
 ||   tail    | tail | tail | head | head | head | all | all | all |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |  | XLM-R-B | XLM-R-L | [Glot500-m](https://huggingface.co/cis-lmu/glot500-base) | XLM-R-B | XLM-R-L | [Glot500-m](https://huggingface.co/cis-lmu/glot500-base) | XLM-R-B | XLM-R-L | [Glot500-m](https://huggingface.co/cis-lmu/glot500-base) |
-| Pseudoperplexity | 304.2 | 168.6 | $\mathbf{1 2 . 2}$ | 12.5 | $\mathbf{8 . 4}$ | 11.8 | 247.8 | 136.4 | $\mathbf{1 1 . 6 4}$ |
-| Sentence Retrieval Tatoeba | 32.6 | 33.6 | $\mathbf{5 9 . 8}$ | 66.2 | 71.1 | $\mathbf{7 5 . 0}$ | 56.6 | 60.4 | $\mathbf{7 0 . 7}$ |
-| Sentence Retrieval Bible | 7.4 | 7.1 | $\mathbf{4 3 . 2}$ | 54.2 | 58.3 | $\mathbf{5 9 . 0}$ | 19.3 | 20.1 | $\mathbf{4 7 . 3}$ |
-| Text Classification | 13.7 | 13.9 | $\mathbf{4 6 . 6}$ | 51.3 | $\mathbf{6 0 . 5}$ | 54.7 | 23.3 | 25.8 | $\mathbf{4 8 . 7}$ |
-| NER | 47.5 | 51.8 | $\mathbf{6 0 . 7}$ | 61.8 | $\mathbf{6 6 . 0}$ | 63.9 | 55.3 | 59.5 | $\mathbf{6 2 . 4}$ |
-| POS | 41.7 | 43.5 | $\mathbf{6 2 . 3}$ | 76.4 | $\mathbf{7 8 . 4}$ | 76.0 | 65.8 | 67.7 | $\mathbf{7 1 . 8}$ |
-| Roundtrip Alignment | 2.57 | 3.13 | $\mathbf{4 . 4 5}$ | 3.42 | 4.06 | $\mathbf{5 . 4 6}$ | 2.77 | 3.34 | $\mathbf{4 . 6 8}$ |
+| Pseudoperplexity | 304.2 | 168.6 | **12.2** | 12.5 | **8.4** | 11.8 | 247.8 | 136.4 | **11.64** |
+| Sentence Retrieval Tatoeba | 32.6 | 33.6 | **59.8** | 66.2 | 71.1 | **75.0** | 56.6 | 60.4 | **70.7** |
+| Sentence Retrieval Bible | 7.4 | 7.1 | **43.2** | 54.2 | 58.3 | **59.0** | 19.3 | 20.1 | **47.3** |
+| Text Classification | 13.7 | 13.9 | **46.6** | 51.3 | **60.5** | 54.7 | 23.3 | 25.8 | **48.7** |
+| NER | 47.5 | 51.8 | **60.7** | 61.8 | **66.0** | 63.9 | 55.3 | 59.5 | **62.4** |
+| POS | 41.7 | 43.5 | **62.3** | 76.4 | **78.4** | 76.0 | 65.8 | 67.7 | **71.8** |
+| Roundtrip Alignment | 2.57 | 3.13 | **4.45** | 3.42 | 4.06 | **5.46** | 2.77 | 3.34 | **4.68** |
 
 ## Citation
 
