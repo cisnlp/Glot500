@@ -1,7 +1,7 @@
 # Glot500: Scaling Multilingual Corpora and Language Models to 500 Languages
 
 [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/cis-lmu/glot500-base)
-[![arXiv](https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg)](https://arxiv.org/abs/<INDEX>)
+[![arXiv](https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg)](https://arxiv.org/abs/2305.12182)
 
 ## Introduction
 This repository contains information about Glot500, code, model and data.
