@@ -11,20 +11,46 @@ This repository contains information about Glot500, code, model and data.
 - Glot2000-c comprises corpora for over 2000 languages, while Glot500-c is a subset of Glot2000-c for over 500 languages, including languages with more than 30,000 sentences.
 
 
+
+## Glot500-m
+
+You can use this model directly with a pipeline for masked language modeling:
+
+```python
+>>> ! pip install transformers
+>>> ! pip install sentencepiece
+```
+
+```python
+>>> from transformers import pipeline
+>>> unmasker = pipeline('fill-mask', model='cis-lmu/glot500-base')
+>>> unmasker("Hello I'm a <mask> model.")
+```
+
+
+Here is how to use this model to get the features of a given text in PyTorch:
+
+```python
+from transformers import AutoTokenizer, AutoModelForMaskedLM
+
+tokenizer = AutoTokenizer.from_pretrained('cis-lmu/glot500-base')
+model = AutoModelForMaskedLM.from_pretrained("cis-lmu/glot500-base")
+
+# prepare input
+text = "Replace me by any text you'd like."
+encoded_input = tokenizer(text, return_tensors='pt')
+
+# forward pass
+output = model(**encoded_input)
+```
+
+
 ## Glot500-c
 
-This is an overview of the corpora included Glot500-c presented in our [paper](https://arxiv.org/abs/<INDEX>). For requesting access to compiled version of Glot500-c, fill out the [form](https://docs.google.com/forms/d/1FHto_4wWYvEF3lz7DDo3P8wQqfS3WhpYfAu5vM95-qU/viewform?edit_requested=true). Glot500-c will be send via email upon duly completing the form and accepting the license included. 
+This is an overview of the corpora included Glot500-c presented in our [paper](https://arxiv.org/abs/2305.12182). For requesting access to compiled version of Glot500-c, fill out the [form](https://docs.google.com/forms/d/1FHto_4wWYvEF3lz7DDo3P8wQqfS3WhpYfAu5vM95-qU/viewform?edit_requested=true). Glot500-c will be send via email upon duly completing the form and accepting the license included. 
 Please note that, while the data sources utilized in this study do not explicitly prohibit the reuse of data for research purposes, some sources do have copyright statements indicating that such use is permissible, while others do not. Additionally, certain sources prohibit the redistribution of data. As such, data from these sources is omitted from the published version of Glot500-c. 
 
-For more information, check out the table below. If you find this overview useful for your research, please cite:
-```
-@inproceedings{imani-etal-2023-glot500,
-    title = "Glot500: Scaling Multilingual Corpora and Language Models to 500 Languages",
-    author = " ImaniGooghari, Ayyoob and Lin, Peiqin and Kargaran, Amir Hossein and Severini, Silvia and Sabet, Masoud Jalili and Kassner, Nora and Ma, Chunlan and Schmid, Helmut and Martins, André and Yvon, François and  Sch{\"u}tze, Hinrich",
-    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics.",
-    year = "2023",
-}
-```
+For more information, check out the table below.
 
 Available |Dataset|Related Papers|Languages |Domain / Notes| Data collection / Verification method|Copyright / Licence|
 |:----|:----|:----|:----|:----|:----|:----|
@@ -104,9 +130,9 @@ Available |Dataset|Related Papers|Languages |Domain / Notes| Data collection / V
 | | | | | | | |
 
 
+## Training and Evalutaion Code
 
-
-## Glot500-m
+**Notice**: The missing part of the code will be completed shortly.
 
 ### Prerequisites
 
@@ -150,14 +176,16 @@ We provide in-depth evaluation of Glot500-m model and baselines in the paper. Ea
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |  | XLM-R-B | XLM-R-L | [Glot500-m](https://huggingface.co/cis-lmu/glot500-base) | XLM-R-B | XLM-R-L | [Glot500-m](https://huggingface.co/cis-lmu/glot500-base) | XLM-R-B | XLM-R-L | [Glot500-m](https://huggingface.co/cis-lmu/glot500-base) |
 | Pseudoperplexity | 304.2 | 168.6 | **12.2** | 12.5 | **8.4** | 11.8 | 247.8 | 136.4 | **11.64** |
-| Sentence Retrieval Tatoeba | 32.6 | 33.6 | **59.8** | 66.2 | 71.1 | **75.0** | 56.6 | 60.4 | **70.7** |
-| Sentence Retrieval Bible | 7.4 | 7.1 | **43.2** | 54.2 | 58.3 | **59.0** | 19.3 | 20.1 | **47.3** |
-| Text Classification | 13.7 | 13.9 | **46.6** | 51.3 | **60.5** | 54.7 | 23.3 | 25.8 | **48.7** |
-| NER | 47.5 | 51.8 | **60.7** | 61.8 | **66.0** | 63.9 | 55.3 | 59.5 | **62.4** |
-| POS | 41.7 | 43.5 | **62.3** | 76.4 | **78.4** | 76.0 | 65.8 | 67.7 | **71.8** |
-| Roundtrip Alignment | 2.57 | 3.13 | **4.45** | 3.42 | 4.06 | **5.46** | 2.77 | 3.34 | **4.68** |
+| Sentence Retrieval Tatoeba (Top 10 Acc.) | 32.6 | 33.6 | **59.8** | 66.2 | 71.1 | **75.0** | 56.6 | 60.4 | **70.7** |
+| Sentence Retrieval Bible (Top 10 Acc.) | 7.4 | 7.1 | **43.2** | 54.2 | 58.3 | **59.0** | 19.3 | 20.1 | **47.3** |
+| Text Classification (F1) | 13.7 | 13.9 | **46.6** | 51.3 | **60.5** | 54.7 | 23.3 | 25.8 | **48.7** |
+| NER (F1) | 47.5 | 51.8 | **60.7** | 61.8 | **66.0** | 63.9 | 55.3 | 59.5 | **62.4** |
+| POS (F1) | 41.7 | 43.5 | **62.3** | 76.4 | **78.4** | 76.0 | 65.8 | 67.7 | **71.8** |
+| Roundtrip Alignment (Acc.) | 2.57 | 3.13 | **4.45** | 3.42 | 4.06 | **5.46** | 2.77 | 3.34 | **4.68** |
 
 ## Citation
+
+ If you find our model, data or the overview of data useful for your research, please cite:
 
 ```
 @inproceedings{imani-etal-2023-glot500,
