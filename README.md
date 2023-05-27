@@ -70,13 +70,11 @@ We request all the users of Glot500-c to cite the original creators of the datse
 
 If you are a *dataset owner* and wish to update any part of this overview, or do not want your dataset to be included in Glot500-c, please send us an email at glot500@cis.lmu.de .
 
-<details> <summary> <b>
- Glot500-c overview table (Click to Exapnd)
- 
- Available |Dataset|Related Papers|Languages |Domain / Notes| Data collection / Verification method| Licence|
+Glot500-c overview table:
+Available |Dataset|Related Papers|Languages |Domain / Notes| Data collection / Verification method| Licence|
 |:----|:----|:----|:----|:----|:----|:----|
- 
- </b> (work in progress) </summary>
+
+<details> <summary> <b> Click to Exapnd </b> (work in progress) </summary>
 
 Available |Dataset|Related Papers|Languages |Domain / Notes| Data collection / Verification method| Licence|
 |:----|:----|:----|:----|:----|:----|:----|
