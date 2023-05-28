@@ -194,16 +194,62 @@ Go to 'modeling/' and run:
 bash train_bash.sh
 ```
 
+### Evaluation
 
+#### Download Datasets
+
+For downloading datasets for NER, POS, and Sentence Retrieval Tatoeba, following the instruction at [xtreme](https://github.com/google-research/xtreme).
+
+For downloading datasets for Sentence Retrieval Bible, Round-Trip Alignment, you can contact Michael Cysouw, Philipps University of Marburg, to request access to the Parallel Bible Corpus for academic purposes.
+
+#### Language Code Conversion
+
+To convert the language code originally used in the datasets to the format of language-scripts, run `python ner_convert.py` and `python pos_convert.py` at 'evaluation/tagging/', and `python retrieval_convert.py` at 'evaluation/retrieval'.
+
+#### Sequence Labeling
+
+For NER evaluation, go to 'evaluation/tagging' and run:
+
+```
+bash evaluate_ner.sh
+```
+
+For POS evaluation, go to 'evaluation/tagging' and run:
+
+```
+bash evaluate_pos.sh
+```
+
+#### Sentence Retrieval
+
+For Sentence Retrieval Tatoeba evaluation, go to 'evaluation/retrieval' and run:
+
+```
+bash evaluate_retrieval_tatoeba.sh
+```
+
+For Sentence Retrieval Bible evaluation, go to 'evaluation/retrieval' and run:
+
+```
+bash evaluate_retrieval_bible.sh
+```
+
+#### Round-Trip Alignment
+
+For Round-Trip Alignment evaluation, go to 'evaluation/round-trip' and run:
+
+```
+python evaluate_roundtrip.py
+```
 
 ## Citation
 
- If you find our model, data or the overview of data useful for your research, please cite:
+If you find our model, data or the overview of data useful for your research, please cite:
 
 ```
 @inproceedings{imani-etal-2023-glot500,
     title = "Glot500: Scaling Multilingual Corpora and Language Models to 500 Languages",
-    author = " ImaniGooghari, Ayyoob and Lin, Peiqin and Kargaran, Amir Hossein and Severini, Silvia and Sabet, Masoud Jalili and Kassner, Nora and Ma, Chunlan and Schmid, Helmut and Martins, André and Yvon, François and  Sch{\"u}tze, Hinrich",
+    author = " Imani, Ayyoob and Lin, Peiqin and Kargaran, Amir Hossein and Severini, Silvia and Sabet, Masoud Jalili and Kassner, Nora and Ma, Chunlan and Schmid, Helmut and Martins, André and Yvon, François and  Sch{\"u}tze, Hinrich",
     booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics.",
     year = "2023",
     url = "https://arxiv.org/abs/2305.12182", 

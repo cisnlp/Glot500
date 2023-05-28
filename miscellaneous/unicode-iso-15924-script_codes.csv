@@ -1,0 +1,159 @@
+script_code,script_name
+Adlm,Adlam
+Aghb,Caucasian Albanian
+Ahom,"Ahom, Tai Ahom"
+Arab,Arabic
+Armi,Imperial Aramaic
+Armn,Armenian
+Avst,Avestan
+Bali,Balinese
+Bamu,Bamum
+Bass,Bassa Vah
+Batk,Batak
+Beng,Bengali (Bangla)
+Bhks,Bhaiksuki
+Bopo,Bopomofo
+Brah,Brahmi
+Brai,Braille
+Bugi,Buginese
+Buhd,Buhid
+Cakm,Chakma
+Cans,Unified Canadian Aboriginal Syllabics
+Cari,Carian
+Cham,Cham
+Cher,Cherokee
+Chrs,Chorasmian
+Copt,Coptic
+Cprt,Cypriot syllabary
+Cyrl,Cyrillic
+Deva,Devanagari (Nagari)
+Diak,Dives Akuru
+Dogr,Dogra
+Dsrt,Deseret (Mormon)
+Dupl,"Duployan shorthand, Duployan stenography"
+Egyp,Egyptian hieroglyphs
+Elba,Elbasan
+Elym,Elymaic
+Ethi,Ethiopic (GeÊ»ez)
+Geor,Georgian (Mkhedruli and Mtavruli)
+Glag,Glagolitic
+Gong,Gunjala Gondi
+Gonm,Masaram Gondi
+Goth,Gothic
+Gran,Grantha
+Grek,Greek
+Gujr,Gujarati
+Guru,Gurmukhi
+Hang,"Hangul (HangÅ­l, Hangeul)"
+Hani,"Han (Hanzi, Kanji, Hanja)"
+Hano,Hanunoo (HanunÃ³o)
+Hatr,Hatran
+Hebr,Hebrew
+Hira,Hiragana
+Hluw,"Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs)"
+Hmng,Pahawh Hmong
+Hmnp,Nyiakeng Puachue Hmong
+Hrkt,Japanese syllabaries (alias for Hiragana + Katakana)
+Hung,Old Hungarian (Hungarian Runic)
+Ital,"Old Italic (Etruscan, Oscan, etc.)"
+Java,Javanese
+Kali,Kayah Li
+Kana,Katakana
+Khar,Kharoshthi
+Khmr,Khmer
+Khoj,Khojki
+Kits,Khitan small script
+Knda,Kannada
+Kthi,Kaithi
+Lana,Tai Tham (Lanna)
+Laoo,Lao
+Latn,Latin
+Lepc,Lepcha (RÃ³ng)
+Limb,Limbu
+Lina,Linear A
+Linb,Linear B
+Lisu,Lisu (Fraser)
+Lyci,Lycian
+Lydi,Lydian
+Mahj,Mahajani
+Maka,Makasar
+Mand,"Mandaic, Mandaean"
+Mani,Manichaean
+Marc,Marchen
+Medf,"Medefaidrin (Oberi Okaime, Oberi ÆkaimÉ)"
+Mend,Mende Kikakui
+Merc,Meroitic Cursive
+Mero,Meroitic Hieroglyphs
+Mlym,Malayalam
+Modi,"Modi, Moá¸Ä«"
+Mong,Mongolian
+Mroo,"Mro, Mru"
+Mtei,"Meitei Mayek (Meithei, Meetei)"
+Mult,Multani
+Mymr,Myanmar (Burmese)
+Nand,Nandinagari
+Narb,Old North Arabian (Ancient North Arabian)
+Nbat,Nabataean
+Newa,"Newa, Newar, Newari, NepÄla lipi"
+Nkoo,NâKo
+Nshu,NÃ¼shu
+Ogam,Ogham
+Olck,"Ol Chiki (Ol Cemetâ, Ol, Santali)"
+Orkh,"Old Turkic, Orkhon Runic"
+Orya,Oriya (Odia)
+Osge,Osage
+Osma,Osmanya
+Palm,Palmyrene
+Pauc,Pau Cin Hau
+Perm,Old Permic
+Phag,Phags-pa
+Phli,Inscriptional Pahlavi
+Phlp,Psalter Pahlavi
+Phnx,Phoenician
+Plrd,Miao (Pollard)
+Prti,Inscriptional Parthian
+Rjng,"Rejang (Redjang, Kaganga)"
+Rohg,Hanifi Rohingya
+Runr,Runic
+Samr,Samaritan
+Sarb,Old South Arabian
+Saur,Saurashtra
+Sgnw,SignWriting
+Shaw,Shavian (Shaw)
+Shrd,"Sharada, ÅÄradÄ"
+Sidd,"Siddham, Siddhaá¹, SiddhamÄtá¹kÄ"
+Sind,"Khudawadi, Sindhi"
+Sinh,Sinhala
+Sogd,Sogdian
+Sogo,Old Sogdian
+Sora,Sora Sompeng
+Soyo,Soyombo
+Sund,Sundanese
+Sylo,Syloti Nagri
+Syrc,Syriac
+Tagb,Tagbanwa
+Takr,"Takri, á¹¬ÄkrÄ«, á¹¬Äá¹krÄ«"
+Tale,Tai Le
+Talu,New Tai Lue
+Taml,Tamil
+Tang,Tangut
+Tavt,Tai Viet
+Telu,Telugu
+Tfng,Tifinagh (Berber)
+Tglg,"Tagalog (Baybayin, Alibata)"
+Thaa,Thaana
+Thai,Thai
+Tibt,Tibetan
+Tirh,Tirhuta
+Ugar,Ugaritic
+Vaii,Vai
+Wara,Warang Citi (Varang Kshiti)
+Wcho,Wancho
+Xpeo,Old Persian
+Xsux,"Cuneiform, Sumero-Akkadian"
+Yezi,Yezidi
+Yiii,Yi
+Zanb,"Zanabazar Square (Zanabazarin DÃ¶rbÃ¶ljin Useg, Xewtee DÃ¶rbÃ¶ljin Bicig, Horizontal Square Script)"
+Zinh,Code for inherited script
+Zyyy,Code for undetermined script
+Zzzz,Code for uncoded script
