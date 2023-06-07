@@ -164,7 +164,7 @@ Available |Dataset|Related Papers|Languages |Domain / Notes| Data collection / V
 We use two settings due to package conflict:
 
 - Major: Python 3.9, `requirements.txt`
-- Sentence retrieval: Python 3.6, `evaluation/retrieval/requirements.txt`
+- Evaluation: Python 3.6, `evaluation/requirements.txt`
 
 ### Data preparation
 
@@ -198,7 +198,10 @@ bash train_bash.sh
 
 #### Download Datasets
 
-For downloading datasets for NER, POS, and Sentence Retrieval Tatoeba, following the instruction at [xtreme](https://github.com/google-research/xtreme).
+For downloading datasets for NER, POS, and Sentence Retrieval Tatoeba, first go to 'evaluation/download_data' and create a `download` folder with ```mkdir -p download```. You then need to manually download `panx_dataset` (for NER) from [here](https://www.amazon.com/clouddrive/share/d3KGCRCIYwhKJF0H3eWA26hjg2ZCRhjpEQtDL70FSBN) (note that it will download as `AmazonPhotos.zip`) to the `download` directory. Finally, run the following command to download the remaining datasets:
+```
+bash scripts/download_data.sh
+```
 
 For downloading datasets for Sentence Retrieval Bible, Round-Trip Alignment, you can contact Michael Cysouw, Philipps University of Marburg, to request access to the Parallel Bible Corpus for academic purposes.
 

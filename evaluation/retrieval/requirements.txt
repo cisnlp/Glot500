@@ -1,7 +1,0 @@
-faiss==1.7.1
-numpy==1.19.5
-pandas==1.1.5
-torch==2.0.1
-tqdm==4.62.3
-transformers==4.18.0
-~orch==1.8.1+cu111
