@@ -176,7 +176,7 @@ Go to 'preprocessing/' and run:
 bash merge_files.sh
 ```
 
-We set `--scale 1` for tokenizer, `--scale 30` for model.  
+Specify `--data_directory` with the directory to data for each language and `--save_directory` with the directory for putting the merged file. For Glot500, we set `--scale 1` for training tokenizer, `--scale 30` for continued pretraining the model.  
 
 ### Vocabulary Extension
 
@@ -186,6 +186,8 @@ Go to 'tokenization/' and run:
 bash train.sh
 ```
 
+Specify `--input_fname` with the merged data file for training the tokenizer and `--save_directory` with the directory for saving the final tokenizer.
+
 ### Continued Pretraining
 
 Go to 'modeling/' and run:
@@ -193,6 +195,8 @@ Go to 'modeling/' and run:
 ```
 bash train_bash.sh
 ```
+
+Specify `train_file` with the merged data file for continued pretraining the model, `--tokenizer_name` with the trained Huggingface-style tokenizer, `--output_dir` with the directory for saving logs and checkpoints during training, and `--cache_dir` with the directory for saving Huggingface cache.
 
 ### Evaluation
 
@@ -217,11 +221,15 @@ For NER evaluation, go to 'evaluation/tagging' and run:
 bash evaluate_ner.sh
 ```
 
+Specify `DATA_DIR` with the directory for NER dataset, `OUTPUT_DIR` with the directory for saving the fine-tuned models and evaluation results.
+
 For POS evaluation, go to 'evaluation/tagging' and run:
 
 ```
 bash evaluate_pos.sh
 ```
+
+Specify `DATA_DIR` with the directory for POS dataset, `OUTPUT_DIR` with the directory for saving the fine-tuned models and evaluation results.
 
 #### Sentence Retrieval
 
@@ -231,11 +239,15 @@ For Sentence Retrieval Tatoeba evaluation, go to 'evaluation/retrieval' and run:
 bash evaluate_retrieval_tatoeba.sh
 ```
 
+Specify `DATA_DIR` with the directory for Sentence Retrieval Tatoeba dataset, `OUTPUT_DIR` with the directory for saving the fine-tuned models and evaluation results.
+
 For Sentence Retrieval Bible evaluation, go to 'evaluation/retrieval' and run:
 
 ```
 bash evaluate_retrieval_bible.sh
 ```
+
+Specify `DATA_DIR` with the directory for Sentence Retrieval Bible dataset, `OUTPUT_DIR` with the directory for saving the fine-tuned models and evaluation results.
 
 #### Round-Trip Alignment
 
