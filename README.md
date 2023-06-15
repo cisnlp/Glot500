@@ -202,9 +202,10 @@ Specify `train_file` with the merged data file for continued pretraining the mod
 
 #### Download Datasets
 
-For downloading datasets for NER, POS, and Sentence Retrieval Tatoeba, first go to 'evaluation/download_data' and create a `download` folder with ```mkdir -p download```. You then need to manually download `panx_dataset` (for NER) from [here](https://www.amazon.com/clouddrive/share/d3KGCRCIYwhKJF0H3eWA26hjg2ZCRhjpEQtDL70FSBN) (note that it will download as `AmazonPhotos.zip`) to the `download` directory. Finally, run the following command to download the remaining datasets:
+For downloading datasets for NER, POS, and Sentence Retrieval Tatoeba, first go to 'evaluation/download_data' and create a `download` folder with ```mkdir -p download```. You then need to manually download `panx_dataset` (for NER) from [here](https://www.amazon.com/clouddrive/share/d3KGCRCIYwhKJF0H3eWA26hjg2ZCRhjpEQtDL70FSBN) (note that it will download as `AmazonPhotos.zip`) to the `download` directory. Finally, run the following command under 'evaluation/download_data' to download and process the datasets:
+
 ```
-bash scripts/download_data.sh
+bash download_data.sh
 ```
 
 For downloading datasets for Sentence Retrieval Bible, Round-Trip Alignment, you can contact Michael Cysouw, Philipps University of Marburg, to request access to the Parallel Bible Corpus for academic purposes.
