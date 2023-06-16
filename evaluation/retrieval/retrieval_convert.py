@@ -5,6 +5,7 @@ from os import listdir
 from os.path import isfile, join
 import math
 import regex
+import codecs
 
 def get_script_list():
     script_codes_df = pd.read_csv('../../miscellaneous/unicode-iso-15924-script_codes.csv', dtype=str)
@@ -43,14 +44,13 @@ def detect_script_by_text(text, char_scripts, script_list):
 
 def get_str(fname):
     s = ''
-    with open(path + fname, 'r', encoding='utf-8') as f:
+    with codecs.open(path + fname, 'r', encoding='utf-8') as f:
         lines = f.readlines()
         for line in lines:
             s += line.strip()
     return s
 
-task_name = 'sentence_retrieval'
-path = '../download_data/download/tatoeba-tmp/'
+path = '../download_data/download/tatoeba/'
 fnames = [f for f in listdir(path) if isfile(join(path, f)) if 'tatoeba' in f]
 
 df = pd.read_csv('../../miscellaneous/lang.tab', sep='\t')
@@ -73,7 +73,7 @@ lang_set = []
 iso_set = []
 
 langs = []
-lang_list = 'sentence_retrieval_tatoeba.txt'
+lang_list = 'tatoeba_lang_list.txt'
 with open(lang_list, 'r') as f:
     lines = f.readlines()
     for line in lines:
@@ -97,20 +97,15 @@ for fname in fnames:
     elif code0 in d2:
         code = d2[code0]
     else:
-        print(code0)
         continue
-    if code in iso_set and code + '_' + result not in lang_set:
-        print(code, result)
     iso_set.append(code)
     code = code + '_' + result
     lang_set.append(code)
     if code in langs:
         continue
-    shutil.copy(path + fname, "/PATH/TO/DATA/" + task_name + "/" + fname.replace('.' + code0, '.' + code).replace('-eng', '-eng_Latn'))
-    shutil.copy(path + fname.replace('eng.' + code0, 'eng.eng'), "/PATH/TO/DATA/" + task_name + "/" + fname.replace('eng.' + code0, 'eng.eng').replace('.' + code0, '.' + code).replace('-eng', '-eng_Latn').replace('.eng', '.eng_Latn'))
+    save_path = '../download_data/download/retrieval_tatoeba/'
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+    shutil.copy(path + fname, save_path + fname.replace('.' + code0, '.' + code).replace('-eng', '-eng_Latn'))
+    shutil.copy(path + fname.replace('eng.' + code0, 'eng.eng'), save_path + fname.replace('eng.' + code0, 'eng.eng').replace('.' + code0, '.' + code).replace('-eng', '-eng_Latn').replace('.eng', '.eng_Latn'))
 
-lang_set = sorted(list(set(lang_set)))
-with open(task_name + '.txt', 'w') as f:
-    for lang in lang_set:
-        f.write('%s\n' % lang)
-    

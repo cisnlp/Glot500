@@ -6,7 +6,7 @@ from os.path import isfile, join
 
 import pandas as pd
 import regex
-
+import codecs
 
 def get_script_list():
     script_codes_df = pd.read_csv('../../miscellaneous/unicode-iso-15924-script_codes.csv', dtype=str)
@@ -45,7 +45,7 @@ def detect_script_by_text(text, char_scripts, script_list):
 
 def get_str(fname):
     s = ''
-    with open(path + fname, 'r', encoding='utf-8') as f:
+    with codecs.open(path + fname, 'r', encoding='utf-8') as f:
         lines = f.readlines()
         for line in lines:
             items1 = line.split('\t')
@@ -53,7 +53,6 @@ def get_str(fname):
                 s += items1[0]
     return s
 
-task_name = 'pos'
 path = '../download_data/download/udpos/'
 fnames = [f for f in listdir(path) if isfile(join(path, f))]
 
@@ -90,12 +89,12 @@ for fname in fnames:
     elif code0 in d2:
         code = d2[code0]
     else:
-        print(code0)
         continue
-    if code in iso_set and code + '_' + result not in lang_set:
-        print(code, result)
     iso_set.append(code)
     code = code + '_' + result
     lang_set.append(code)
-    shutil.copy(path + fname, "/PATH/TO/DATASET/" + task_name + "/" + fname.replace('-' + code0 + '.', '-' + code + '.'))
+    save_path = '../download_data/download/pos/'
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+    shutil.copy(path + fname, save_path + fname.replace('-' + code0 + '.', '-' + code + '.'))
 

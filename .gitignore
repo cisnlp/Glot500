@@ -3,3 +3,4 @@ nohup.out
 modeling/wandb
 .nfs*
 *.log
+evaluation/download_data/download
