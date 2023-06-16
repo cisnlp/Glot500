@@ -1,10 +1,12 @@
-import pandas as pd
+import math
 import os
 import shutil
 from os import listdir
 from os.path import isfile, join
-import math
+
+import pandas as pd
 import regex
+
 
 def get_script_list():
     script_codes_df = pd.read_csv('../../miscellaneous/unicode-iso-15924-script_codes.csv', dtype=str)
@@ -52,7 +54,7 @@ def get_str(fname):
     return s
 
 task_name = 'ner'
-path = 'download/panx/'
+path = '../download_data/download/panx/'
 fnames = [f for f in listdir(path) if isfile(join(path, f))]
 
 df = pd.read_csv('../../miscellaneous/lang.tab', sep='\t')

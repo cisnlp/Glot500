@@ -50,7 +50,7 @@ def get_str(fname):
     return s
 
 task_name = 'sentence_retrieval'
-path = 'download/tatoeba-tmp/'
+path = '../download_data/download/tatoeba-tmp/'
 fnames = [f for f in listdir(path) if isfile(join(path, f)) if 'tatoeba' in f]
 
 df = pd.read_csv('../../miscellaneous/lang.tab', sep='\t')
