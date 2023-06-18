@@ -63,12 +63,26 @@ function download_udpos {
 
 function download_panx {
     echo "Download panx NER dataset"
-    base_dir=$DIR/panx_dataset/
-    python $REPO/utils_preprocess.py \
-        --data_dir $base_dir \
-        --output_dir $DIR/panx \
-        --task panx
-    echo "Successfully downloaded data at $DIR/panx" >> $DIR/download.log
+    if [ -f $DIR/AmazonPhotos.zip ]; then
+         base_dir=$DIR/panx_dataset/
+         unzip -qq -j $DIR/AmazonPhotos.zip -d $base_dir
+         cd $base_dir
+         langs=(ace af als am ang an arc ar arz as ast ay az bar ba bat-smg be be-x-old bg bh bn bo br bs ca cbk-zam cdo ceb ce ckb co crh csb cs cv cy da de diq dv el eml en eo es et eu ext fa fi fiu-vro fo frr fr fur fy gan ga gd gl gn gu hak he hi hr hsb hu hy ia id ig ilo io is it ja jbo jv ka kk km kn ko ksh ku ky la lb lij li lmo ln lt lv map-bms mg mhr min mi mk ml mn mr ms mt mwl my mzn nap nds ne nl nn no nov oc or os pa pdc pl pms pnb ps pt qu rm ro ru rw sah sa scn sco sd sh simple si sk sl so sq sr su sv sw szl ta te tg th tk tl tr tt ug uk ur uz vec vep vi vls vo war wa wuu xmf yi yo zea zh-classical zh-min-nan zh zh-yue)
+         for lg in ${langs[@]}; do
+             tar xzf $base_dir/${lg}.tar.gz
+             for f in dev test train; do mv $base_dir/$f $base_dir/${lg}-${f}; done
+         done
+         cd $REPO
+         python $REPO/utils_preprocess.py \
+             --data_dir $base_dir \
+             --output_dir $DIR/panx \
+             --task panx
+         rm -rf $base_dir
+         echo "Successfully downloaded data at $DIR/panx" >> $DIR/download.log
+     else
+         echo "Please download the AmazonPhotos.zip file on Amazon Cloud Drive manually and save it to $DIR/AmazonPhotos.zip"
+         echo "https://www.amazon.com/clouddrive/share/d3KGCRCIYwhKJF0H3eWA26hjg2ZCRhjpEQtDL70FSBN"
+     fi
 }
 
 function download_tatoeba {
