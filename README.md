@@ -68,7 +68,7 @@ Please note that, while the data sources utilized in this study do not explicitl
 As regards the ND (NoDerivs) constraint for some datasets, we only change the format of the container while preserving the original contents.
 The first column of the table indicates the availability of each corpus in the downloadable Glot500-c (yes/no/partially).
 
-We request all the users of Glot500-c to cite the original creators of the datsets and comply to each datasets' license. A BibTex file is available.
+We request all the users of Glot500-c to cite the original creators of the datsets and comply to each datasets' license. A [BibTex](dataset_citations.bib) file is available.
 
 If you are a *dataset owner* and wish to update any part of this overview, or do not want your dataset to be included in Glot500-c, please send us an email at glot500@cis.lmu.de .
 
