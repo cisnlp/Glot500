@@ -57,40 +57,44 @@ function download_udpos {
     download_treebank all $base_dir $out_dir
 
     cd $REPO
-    python $REPO/utils_preprocess.py --data_dir $out_dir/ --output_dir $DIR/udpos/ --task  udpos
+    python $REPO/utils_preprocess.py --data_dir $out_dir/ --output_dir $DIR/udpos/ --task udpos
     echo "Successfully downloaded data at $DIR/udpos" >> $DIR/download.log
+    python $REPO/utils_preprocess.py --data_dir $DIR/udpos/ --output_dir $DIR/pos/ --task tagging_iso_convert
+    cp pos_labels.txt $DIR/pos/labels.txt
 }
 
 function download_panx {
     echo "Download panx NER dataset"
-    if [ -f $DIR/AmazonPhotos.zip ]; then
-         base_dir=$DIR/panx_dataset/
-         unzip -qq -j $DIR/AmazonPhotos.zip -d $base_dir
-         cd $base_dir
-         langs=(ace af als am ang an arc ar arz as ast ay az bar ba bat-smg be be-x-old bg bh bn bo br bs ca cbk-zam cdo ceb ce ckb co crh csb cs cv cy da de diq dv el eml en eo es et eu ext fa fi fiu-vro fo frr fr fur fy gan ga gd gl gn gu hak he hi hr hsb hu hy ia id ig ilo io is it ja jbo jv ka kk km kn ko ksh ku ky la lb lij li lmo ln lt lv map-bms mg mhr min mi mk ml mn mr ms mt mwl my mzn nap nds ne nl nn no nov oc or os pa pdc pl pms pnb ps pt qu rm ro ru rw sah sa scn sco sd sh simple si sk sl so sq sr su sv sw szl ta te tg th tk tl tr tt ug uk ur uz vec vep vi vls vo war wa wuu xmf yi yo zea zh-classical zh-min-nan zh zh-yue)
-         for lg in ${langs[@]}; do
-             tar xzf $base_dir/${lg}.tar.gz
-             for f in dev test train; do mv $base_dir/$f $base_dir/${lg}-${f}; done
-         done
-         cd $REPO
-         python $REPO/utils_preprocess.py \
-             --data_dir $base_dir \
-             --output_dir $DIR/panx \
-             --task panx
-         rm -rf $base_dir
-         echo "Successfully downloaded data at $DIR/panx" >> $DIR/download.log
-     else
-         echo "Please download the AmazonPhotos.zip file on Amazon Cloud Drive manually and save it to $DIR/AmazonPhotos.zip"
-         echo "https://www.amazon.com/clouddrive/share/d3KGCRCIYwhKJF0H3eWA26hjg2ZCRhjpEQtDL70FSBN"
-     fi
+    base_dir=$DIR/panx_dataset/
+    if ! [ -d $base_dir ]; then
+        unzip -qq -j $DIR/AmazonPhotos.zip -d $base_dir
+        cd $base_dir
+        langs=(ace af als am ang an arc ar arz as ast ay az bar ba bat-smg be be-x-old bg bh bn bo br bs ca cbk-zam cdo ceb ce ckb co crh csb cs cv cy da de diq dv el eml en eo es et eu ext fa fi fiu-vro fo frr fr fur fy gan ga gd gl gn gu hak he hi hr hsb hu hy ia id ig ilo io is it ja jbo jv ka kk km kn ko ksh ku ky la lb lij li lmo ln lt lv map-bms mg mhr min mi mk ml mn mr ms mt mwl my mzn nap nds ne nl nn no nov oc or os pa pdc pl pms pnb ps pt qu rm ro ru rw sah sa scn sco sd sh simple si sk sl so sq sr su sv sw szl ta te tg th tk tl tr tt ug uk ur uz vec vep vi vls vo war wa wuu xmf yi yo zea zh-classical zh-min-nan zh zh-yue)
+        for lg in ${langs[@]}; do
+            tar xzf $base_dir/${lg}.tar.gz
+            for f in dev test train; do mv $base_dir/$f $base_dir/${lg}-${f}; done
+        done
+        cd $REPO
+        python $REPO/utils_preprocess.py \
+            --data_dir $base_dir \
+            --output_dir $DIR/panx \
+            --task panx
+        rm -rf $base_dir
+        echo "Successfully downloaded data at $DIR/panx" >> $DIR/download.log
+    fi
+    python $REPO/utils_preprocess.py --data_dir $DIR/panx/ --output_dir $DIR/ner/ --task tagging_iso_convert
+    cp ner_labels.txt $DIR/ner/labels.txt
 }
 
 function download_tatoeba {
     base_dir=$DIR/tatoeba/
-    wget https://github.com/facebookresearch/LASER/archive/main.zip
-    unzip -qq -o main.zip -d $base_dir/
-    mv $base_dir/LASER-main/data/tatoeba/v1/* $base_dir/
+    if ! [ -d $base_dir ]; then
+        wget https://github.com/facebookresearch/LASER/archive/main.zip
+        unzip -qq -o main.zip -d $base_dir/
+        mv $base_dir/LASER-main/data/tatoeba/v1/* $base_dir/
+    fi
     echo "Successfully downloaded data at $DIR/tatoeba" >> $DIR/download.log
+    python $REPO/utils_preprocess.py --data_dir $DIR/tatoeba/ --output_dir $DIR/retrieval_tatoeba/ --task retrieval_iso_convert
 }
 
 download_tatoeba

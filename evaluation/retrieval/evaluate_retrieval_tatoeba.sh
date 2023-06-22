@@ -26,7 +26,7 @@ DIM=768
 NLAYER=12
 LAYER=7
 
-DATA_DIR="/PATH/TO/DATA/"
+DATA_DIR="../download_data/download/retrieval_tatoeba/"
 OUTPUT_DIR="/PATH/TO/OUTPUT/"
 
 python evaluate_retrieval_tatoeba.py \

@@ -25,7 +25,7 @@ BATCH_SIZE=8
 GRAD_ACC=4
 MAX_LENGTH=256
 
-DATA_DIR="/PATH/TO/DATA/"
+DATA_DIR="../download_data/download/ner/"
 OUTPUT_DIR="/PATH/TO/OUTPUT/"
 
 python evaluate_ner.py \

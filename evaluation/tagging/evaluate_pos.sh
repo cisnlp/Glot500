@@ -26,7 +26,7 @@ GRAD_ACC=4
 MAX_LENGTH=256
 
 
-DATA_DIR="/PATH/TO/DATA/"
+DATA_DIR="../download_data/download/pos/"
 OUTPUT_DIR="/PATH/TO/OUTPUT/"
 
 python evaluate_pos.py \

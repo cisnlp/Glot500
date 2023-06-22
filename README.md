@@ -217,10 +217,6 @@ bash download_data.sh
 
 For downloading datasets for Sentence Retrieval Bible, Round-Trip Alignment, you can contact Michael Cysouw, Philipps University of Marburg, to request access to the Parallel Bible Corpus for academic purposes.
 
-#### Language Code Conversion
-
-To convert the language code originally used in the datasets to the format of language-scripts, run `python ner_convert.py` and `python pos_convert.py` at 'evaluation/tagging/', and `python retrieval_convert.py` at 'evaluation/retrieval'.
-
 #### Sequence Labeling
 
 For NER evaluation, go to 'evaluation/tagging' and run:
