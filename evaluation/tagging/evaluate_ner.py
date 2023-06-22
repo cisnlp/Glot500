@@ -13,10 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import argparse
-from transformers import BertTokenizer, XLMTokenizer, XLMRobertaTokenizer
+import os
+
+from transformers import BertTokenizer, XLMRobertaTokenizer, XLMTokenizer
+
 from run_tag import run
+
 
 def tokenize_preprocess(args):
     def _preprocess_one_file(infile, outfile, idxfile, tokenizer, max_seq_len):
@@ -185,10 +188,10 @@ def main():
         for line in lines:
             args.predict_langs.append(line.strip().split('\t')[0])
 
-    args.data_dir = args.data_dir + args.model_name_or_path
+    args.data_dir = args.data_dir + args.model_name_or_path.split('/')[-1]
     if not os.path.exists(args.data_dir):
         os.makedirs(args.data_dir)
-    args.output_dir = args.output_dir + args.model_name_or_path + str(args.seed)
+    args.output_dir = args.output_dir + args.model_name_or_path.split('/')[-1]
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
     else:

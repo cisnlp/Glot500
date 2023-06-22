@@ -187,11 +187,11 @@ def main():
         lines = f.readlines()
         for line in lines:
             args.predict_langs.append(line.strip().split('\t')[0])
-
-    args.data_dir = args.data_dir + args.model_name_or_path
+    
+    args.data_dir = args.data_dir + args.model_name_or_path.split('/')[-1]
     if not os.path.exists(args.data_dir):
         os.makedirs(args.data_dir)
-    args.output_dir = args.output_dir + args.model_name_or_path + str(args.seed)
+    args.output_dir = args.output_dir + args.model_name_or_path.split('/')[-1]
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
     else:

@@ -41,7 +41,7 @@ python evaluate_pos.py \
     --per_gpu_train_batch_size $BATCH_SIZE \
     --per_gpu_eval_batch_size 32 \
     --save_steps 500 \
-    --seed 5 \
+    --seed 1 \
     --learning_rate $LR \
     --do_train \
     --do_eval \
