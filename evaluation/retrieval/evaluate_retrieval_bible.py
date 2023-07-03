@@ -531,7 +531,7 @@ def main():
     args = parser.parse_args()
 
     args.predict_langs = []
-    with open('retrieval_lang_list.txt', 'r') as f:
+    with open('bible_lang_list.txt', 'r') as f:
         lines = f.readlines()
         for line in lines:
             args.predict_langs.append(line.strip().split('\t')[0])
