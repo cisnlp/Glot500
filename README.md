@@ -61,7 +61,7 @@ We provide in-depth evaluation of Glot500-m model and baselines in our [paper](h
 
 ## Glot500-c
 
-This is an overview of the corpora included Glot500-c presented in our [paper](https://arxiv.org/abs/2305.12182). Glot500-c will be sent via email upon duly completing a form and accepting the license included (**note**: the request form will be soon made available). For more information, check out the table below. 
+This is an overview of the corpora included Glot500-c presented in our [paper](https://arxiv.org/abs/2305.12182). Glot500-c will be sent via email upon filling [the data request form](https://docs.google.com/forms/d/1FHto_4wWYvEF3lz7DDo3P8wQqfS3WhpYfAu5vM95-qU/viewform?edit_requested=true). For more information, check out the table below. 
 
 **Disclaimer**
 Please note that, while the data sources utilized in this study do not explicitly prohibit the reuse of data for research purposes, some sources do have copyright statements indicating that such use is permissible, while others do not. Additionally, certain sources prohibit the redistribution of data. As such, data from these sources is omitted from the published version of Glot500-c.  
