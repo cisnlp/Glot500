@@ -1,14 +1,19 @@
 # Glot500: Scaling Multilingual Corpora and Language Models to 500 Languages
 
-[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/cis-lmu/glot500-base)
+[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/cis-lmu/glot500-base)
+[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Data-green)](https://huggingface.co/datasets/cis-lmu/Glot500)
 [![arXiv](https://img.shields.io/badge/arXiv-2305.12182-b31b1b.svg)](https://arxiv.org/abs/2305.12182)
 
 ## Introduction
 This repository contains information about Glot500 [models](#glot500-m), [data](#glot500-c), and [code](#training-and-evalutaion-code).
 
-- [Glot500-m](https://huggingface.co/cis-lmu/glot500-base) is an extended version of [XLM-R](https://huggingface.co/xlm-roberta-base), covering more than **500 languages** compared to XLM-R's 104 languages.
+- Glot500-m is an extended version of XLM-R-base, covering more than **500 languages** compared to XLM-R's 104 languages.
+
+  - Glot500-m is available at [huggingface-models](https://huggingface.co/cis-lmu/glot500-base).
 
 - Glot2000-c comprises corpora for over 2000 languages, while [Glot500-c](#glot500-c) is a subset of Glot2000-c for over 500 languages, including languages with more than 30,000 sentences.
+  - Glot500-c will be sent via email upon filling [the data request form](https://docs.google.com/forms/d/1FHto_4wWYvEF3lz7DDo3P8wQqfS3WhpYfAu5vM95-qU/viewform?edit_requested=true).
+  - Glot500-c dataset (the part that we can redistribute) is available at [huggingface-dataset](https://huggingface.co/datasets/cis-lmu/Glot500)
 
 
 
@@ -61,7 +66,7 @@ We provide in-depth evaluation of Glot500-m model and baselines in our [paper](h
 
 ## Glot500-c
 
-This is an overview of the corpora included Glot500-c presented in our [paper](https://arxiv.org/abs/2305.12182). Glot500-c will be sent via email upon filling [the data request form](https://docs.google.com/forms/d/1FHto_4wWYvEF3lz7DDo3P8wQqfS3WhpYfAu5vM95-qU/viewform?edit_requested=true). For more information, check out the table below. 
+This is an overview of the corpora included Glot500-c presented in our [paper](https://arxiv.org/abs/2305.12182). Glot500-c will be sent via email upon filling [the data request form](https://docs.google.com/forms/d/1FHto_4wWYvEF3lz7DDo3P8wQqfS3WhpYfAu5vM95-qU/viewform?edit_requested=true). The part that we can redistribute is available at [huggingface-dataset](https://huggingface.co/datasets/cis-lmu/Glot500). For more information, check out the table below. 
 
 **Disclaimer**
 Please note that, while the data sources utilized in this study do not explicitly prohibit the reuse of data for research purposes, some sources do have copyright statements indicating that such use is permissible, while others do not. Additionally, certain sources prohibit the redistribution of data. As such, data from these sources is omitted from the published version of Glot500-c.  
@@ -76,7 +81,7 @@ Glot500-c overview table:
 Available |Dataset|Related Papers|Languages |Domain / Notes| Data collection / Verification method| License|
 |:----|:----|:----|:----|:----|:----|:----|
 
-<details> <summary> <b> Click to Exapand </b> (work in progress) </summary>
+<details> <summary> <b> Click to Expand Table </b>  </summary>
 
 Available |Dataset|Related Papers|Languages |Domain / Notes| Data collection / Verification method| License|
 |:----|:----|:----|:----|:----|:----|:----|
