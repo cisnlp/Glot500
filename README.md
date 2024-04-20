@@ -5,15 +5,12 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2305.12182-b31b1b.svg)](https://arxiv.org/abs/2305.12182)
 
 ## Introduction
-This repository contains information about Glot500 [models](#glot500-m), [data](#glot500-c), and [code](#training-and-evalutaion-code).
+This repository contains information about Glot500 [model](#glot500-m), [data](#glot500-c), and [code](#training-and-evalutaion-code).
 
-- Glot500-m is an extended version of XLM-R-base, covering more than **500 languages** compared to XLM-R's 104 languages.
+- Glot500-m is an extended version of XLM-R-base, covering more than **500 languages** compared to XLM-R's 104 languages. Glot500-m is available at [huggingface-models](https://huggingface.co/cis-lmu/glot500-base).
 
-  - Glot500-m is available at [huggingface-models](https://huggingface.co/cis-lmu/glot500-base).
-
-- Glot2000-c comprises corpora for over 2000 languages, while [Glot500-c](#glot500-c) is a subset of Glot2000-c for over 500 languages, including languages with more than 30,000 sentences.
-  - Glot500-c will be sent via email upon filling [the data request form](https://docs.google.com/forms/d/1FHto_4wWYvEF3lz7DDo3P8wQqfS3WhpYfAu5vM95-qU/viewform?edit_requested=true).
-  - Glot500-c dataset (the part that we can redistribute) is available at [huggingface-dataset](https://huggingface.co/datasets/cis-lmu/Glot500)
+- Glot2000-c comprises corpora for over 2000 languages, while Glot500-c is a subset of Glot2000-c for over 500 languages, including languages with more than 30,000 sentences.
+  - Glot500-c dataset (the part that we can redistribute) is available at [huggingface-dataset](https://huggingface.co/datasets/cis-lmu/Glot500). For a more complete version of the data, you need to fill [the data request form](https://docs.google.com/forms/d/1FHto_4wWYvEF3lz7DDo3P8wQqfS3WhpYfAu5vM95-qU/viewform?edit_requested=true).
 
 
 
